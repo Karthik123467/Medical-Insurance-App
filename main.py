@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-
+from sklearn.ensemble import GradientBoostingRegressor
 # Load the model and scaler
 model = pickle.load(open("insurance_model.pkl", "rb"))
 scaler = pickle.load(open("scaler.pkl", "rb"))
