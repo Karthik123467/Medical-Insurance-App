@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 from sklearn.ensemble import GradientBoostingRegressor
-# Load the model and scaler
-model = pickle.load(open("insurance_model.pkl", "rb"))
-scaler = pickle.load(open("scaler.pkl", "rb"))
+
+model = joblib.load("insurance_model.joblib")
+scaler = joblib.load("scaler.joblib")
 
 st.set_page_config(page_title="Medical Insurance Cost Predictor", layout="centered")
 st.title("🩺 Medical Insurance Cost Predictor")
